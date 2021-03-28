@@ -1,18 +1,25 @@
-# PostCSS Compatible Mp
+<!--
+ * @Author: cheese
+ * @Date: 2021-03-28 17:28:49
+ * @LastEditTime: 2021-03-28 18:05:38
+-->
+# postcss-compatible-mp
 
-[PostCSS] plugin to make css class names compatible with wechat miniprogram.
+一个用来将微信小程序不支持的 CSS/WXSS 类名进行转换的 [PostCSS] 插件。初衷是为了解决 tailwindcss 在微信小程序中不能使用的问题。
 
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
-.foo {
-    /* Input example */
+/* 微信小程序不支持这样的写法，会报错 */
+.top-0\.5 {
+  margin-top: 0.125rem;
 }
 ```
 
 ```css
-.foo {
-  /* Output example */
+/* 上面的类名会被转换成这样 */
+.top-0p5 {
+  margin-top: 0.125rem;
 }
 ```
 
