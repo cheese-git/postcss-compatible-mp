@@ -11,7 +11,7 @@
     "escape"
   ],
   "scripts": {
-    "test": "jest-ci --coverage && eslint-ci ."
+    "test": "jest --coverage && eslint ."
   },
   "author": "cheese <cheese-h@qq.com>",
   "license": "MIT",

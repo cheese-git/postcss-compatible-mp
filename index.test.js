@@ -1,7 +1,7 @@
 /*
  * @Author: cheese
  * @Date: 2021-03-28 17:28:49
- * @LastEditTime: 2021-03-28 17:37:01
+ * @LastEditTime: 2021-03-28 17:59:09
  */
 const postcss = require('postcss')
 
@@ -16,7 +16,7 @@ async function run (input, output, opts = { }) {
 
 
 it('does something', async () => {
-  await run('a{ }', 'a{ }', { })
+  await run('.top-0\\.5 { top: 0.125rem; }', '.top-0p5 { top: 0.125rem; }', { })
 })
 
 

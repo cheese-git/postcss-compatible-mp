@@ -1,8 +1,10 @@
 /*
  * @Author: cheese
  * @Date: 2021-03-28 17:28:49
- * @LastEditTime: 2021-03-28 17:38:16
+ * @LastEditTime: 2021-03-28 18:00:03
  */
+
+
 // module.exports = (opts = { }) => {
 module.exports = () => {
 
@@ -11,9 +13,15 @@ module.exports = () => {
   return {
     postcssPlugin: 'postcss-compatible-mp',
     
-    Root (root, postcss) {
-      // Transform CSS AST here
-      
+    // Root (root, postcss) {
+    //   // Transform CSS AST here
+    //   // console.log(root)
+    // },
+
+    Rule(rule) {
+      rule.selectors = rule.selectors.map(selector => {
+        return selector.replace('\\.','p')
+      })
     }
     
 
