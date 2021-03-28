@@ -1,7 +1,7 @@
 <!--
  * @Author: cheese
  * @Date: 2021-03-28 17:28:49
- * @LastEditTime: 2021-03-28 18:11:38
+ * @LastEditTime: 2021-03-28 18:28:32
 -->
 # postcss-compatible-mp
 
@@ -10,16 +10,26 @@
 [PostCSS]: https://github.com/postcss/postcss
 
 ```css
-/* 微信小程序不支持这样的写法，会报错 */
+/* 微信小程序不支持以下写法，会报错 */
+
 .top-0\.5 {
   margin-top: 0.125rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 ```
 
 ```css
-/* 上面的类名会被转换成这样 */
+/* 上面的类名会被转换成： */
+
 .top-0p5 {
   margin-top: 0.125rem;
+}
+
+.w-1of2 {
+  width: 50%;
 }
 ```
 
