@@ -1,7 +1,7 @@
 /*
  * @Author: cheese
  * @Date: 2021-03-28 17:28:49
- * @LastEditTime: 2021-03-28 18:00:03
+ * @LastEditTime: 2021-03-28 18:25:07
  */
 
 
@@ -20,7 +20,7 @@ module.exports = () => {
 
     Rule(rule) {
       rule.selectors = rule.selectors.map(selector => {
-        return selector.replace('\\.','p')
+        return selector.replace('\\.','p').replace(`\\/`,'of')
       })
     }
     
